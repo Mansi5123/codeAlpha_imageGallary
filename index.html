@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="gallery-title">Advanced Image Gallery</h1>
+  <hr>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item nature"><img src="nature1.png" alt="Nature 1" onclick="openLightbox(this)"></div>
+    <div class="gallery-item city"><img src="city1.png" alt="City 1" onclick="openLightbox(this)"></div>
+    <div class="gallery-item nature"><img src="nature2.png" alt="Nature 2" onclick="openLightbox(this)"></div>
+    <div class="gallery-item city"><img src="city2.png" alt="City 2" onclick="openLightbox(this)"></div>
+    <div class="gallery-item nature"><img src="nature3.png" alt="Nature 3" onclick="openLightbox(this)"></div>
+    <div class="gallery-item city"><img src="city3.png" alt="City 3" onclick="openLightbox(this)"></div>
+  </div>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="Large View">
+  <div class="nav">
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
